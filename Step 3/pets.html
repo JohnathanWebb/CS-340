@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pets Page will show the users pets</title>
+<link rel="stylesheet" href="css/mainstyles.css">
+<link rel="stylesheet" href="css/petstyles.css">
+<script src="/makepet.js"></script>
+</head>
+<ul id="NavBar">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="vets.html">Vets</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="pets.html">Pets</a></li>
+    <li><a href="visits.html">Visits</a></li>
+</ul>
+<body>
+    <div id="PetContainer">
+        <div id="PetNameImage">
+            <h1 id="PetName">Fluffy</h1>
+            <img src="./images/fluffums.png">
+        </div>
+        <div id="PetInformation">
+            <h2>Birthdate: 08/12/2020</h2>
+            <p1>Fluffy was adopted from a shelter on September 23rd, 2020. He was<br>
+            brought into his forever home where he gets lots of pats and belly rubs.<br>
+            He enjoys long walks in the park and barking at doorbells on tv. </p1>
+            <h3>Medical Record:</h3>
+            <p2>Here medical records will go</p2>
+            <h3>Insurance: </h3>
+            <p2> Here insurance will go.</p2>
+        </div>
+        <div id="AddPetContainer">
+            <button id="AddPetButton">Add Pet</button>
+        </div>
+    </div>
+    <div id="PetModal">
+        <div id="NewPet">
+            <form id="AddPetForm">
+                <label name="name">Name: </label><br>
+                <input type="text"><br>
+                <label name="breed">Breed: </label><br>
+                <input type="text"><br>
+                <label name="birthdate">Birthdate: </label><br>
+                <input type="date"><br>
+                <label name="insurance">Insurance: </label><br>
+                <input type="text"><br>
+                <label name="image">Upload Photo: </label><br>
+                <input type="file" id="PetPhoto"><br>
+                <button type="button">Add Pet</button>
+            </form>
+        </div>
+    </div>
+</body>
+<html>
