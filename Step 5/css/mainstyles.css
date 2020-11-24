@@ -1,0 +1,62 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+
+
+#VetsDiv {
+    width: 100%;
+    margin: auto;
+    display: block;
+    position: fixed;
+}
+
+#VetTableHead {
+    font-size: 25pt;
+    padding-bottom: 2%;
+}
+
+#VetTable {
+    width: 60%;
+    padding-top: 5%;
+    margin: auto;
+    font-size: 18pt;
+}
+
+td {
+    padding-top: 5px;
+}
+
+tbody {
+    background-color: lightgray;
+}
+
+
+#AddNewDoc {
+    margin: auto;
+    padding-left: 40%;
+    padding-top: 5%;
+    width: 100%;
+    display: block;
+}

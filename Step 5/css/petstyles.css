@@ -1,0 +1,56 @@
+#PetModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+#PetContainer {
+	width: 100%;
+	column-count: 2;
+	column-width: 50%;
+	display: block;
+	margin: auto;
+	padding-left: 10%;
+	padding-top: 5%;
+}
+
+
+input {
+	display: block;
+	margin: auto;
+}
+
+
+
+#NewPet {
+    display: none;
+    margin: 5% auto;
+    height: 60%;
+    width: 40%;
+    columns: 100% 1;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    -webkit-animation-name: MakePetAnimate;
+    -webkit-animation-duration: 0.4s;
+    animation-name: MakePetAnimate;
+    animation-duration: 0.4s;
+    overflow: auto;
+}
+
+@-webkit-keyframes MakePetAnimate {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes MakePetAnimate {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
