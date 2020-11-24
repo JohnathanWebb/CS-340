@@ -1,0 +1,54 @@
+
+CREATE TABLE owner (
+owner_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+first_name VARCHAR(30) NOT NULL,
+last_name VARCHAR(30) NOT NULL,
+email VARCHAR(255) NOT NULL,
+phone VARCHAR(15) NOT NULL,
+password VARCHAR(255) NOT NULL,
+address VARCHAR(255) NOT NULL,
+state VARCHAR(30) NOT NULL,
+zipcode VARCHAR(20) NOT NULL
+);
+
+
+
+
+CREATE TABLE pet (
+pet_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+name VARCHAR(30) NOT NULL,
+animal VARCHAR(50) DEFAULT 'Dog',
+birthdate DATE NOT NULL,
+owner_id INT NOT NULL,
+FOREIGN KEY (owner_id) REFERENCES owner(owner_id),
+insurance VARCHAR(255) DEFAULT NULL
+);
+
+CREATE TABLE service (
+service_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+type TEXT
+);
+
+CREATE TABLE vet (
+vet_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+clinic_name VARCHAR(60) NOT NULL,
+address VARCHAR(255) NOT NULL,
+state VARCHAR(30) NOT NULL,
+zipcode VARCHAR(30) NOT NULL,
+phone VARCHAR(30) NOT NULL,
+email VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE visit (
+visit_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+date DATE NOT NULL,
+pet_id INT NOT NULL,
+vet_id INT NOT NULL,
+FOREIGN KEY (vet_id) REFERENCES vet(vet_id),
+FOREIGN KEY (pet_id) REFERENCES pet(pet_id),
+cost INT NOT NULL,
+service_id INT NOT NULL,
+FOREIGN KEY (service_id) REFERENCES service(service_id),
+file_upload TEXT
+);
